@@ -1,0 +1,31 @@
+.Top {
+    padding-top: 25px;
+}
+
+.slick_list {
+    padding: 0px 50px;
+    position: relative;
+    overflow: hidden;
+    display: block;
+    margin: 0;
+}
+
+.slick_track {
+    position: relative;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+}
+
+.slick-slide {
+    width: 100%;
+    max-width: 1060px;
+}
+
+.slick-slide img {
+    display: inline-block;
+    border-radius: 4px;
+    object-fit: cover;
+}
