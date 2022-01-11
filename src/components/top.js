@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import "../css/top.css";
 import carousel01 from "../images/carousel_01.jpg";
 import carousel02 from "../images/carousel_02.jpg";
@@ -12,24 +12,36 @@ import carousel09 from "../images/carousel_09.jpg";
 import carousel10 from "../images/carousel_10.jpg";
 
 function Top () {
+  const slides = [
+    {image : carousel01},
+    {image : carousel02},
+    {image : carousel03},
+    {image : carousel04},
+    {image : carousel05},
+    {image : carousel06},
+    {image : carousel07},
+    {image : carousel08},
+    {image : carousel09},
+    {image : carousel10},
+  ]
+  
   return (
     <div className="Top">
       <button></button>
       <button></button>
       <div className="slick_list">
         <div className="slick_track">
-          <div className="slick-slide slick-cloned">
-            <img src={carousel01}></img>
-          </div>
-          <div className="slick-slide slick-cloned">
-            <img src={carousel02}></img>
-          </div>
-          <div className="slick-slide slick-cloned">
-            <img src={carousel03}></img>
-          </div>
+          {slides.map((slide, index) => {
+            return(
+              <div className="slick-slide slick-cloned">
+                <img src={slide.image}></img>
+              </div>
+            )
+          })}
         </div>
       </div>
     </div>
+    
   )
 }
 

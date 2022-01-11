@@ -6,7 +6,6 @@
     padding: 0px 50px;
     position: relative;
     overflow: hidden;
-    display: block;
     margin: 0;
 }
 
@@ -16,16 +15,21 @@
     top: 0;
     display: flex;
     flex-wrap: nowrap;
-    width: 100%;
+    width: 10000px;
 }
 
 .slick-slide {
+    padding: 0px 12px;
+    box-sizing: content-box;
     width: 100%;
     max-width: 1060px;
+    position: relative;
 }
 
 .slick-slide img {
     display: inline-block;
     border-radius: 4px;
     object-fit: cover;
+    width: 100%;
+    height: 100%;
 }
