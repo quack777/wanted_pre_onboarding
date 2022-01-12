@@ -5,7 +5,7 @@ export default function NavMenu() {
   return(
     <>
       <ul className="NavMenu">
-        <li>
+        <li className="HomeButton">
           <a>홈</a>
         </li>
         <li>
