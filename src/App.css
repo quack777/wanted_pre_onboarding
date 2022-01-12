@@ -74,6 +74,10 @@ table {
     height: 50px;
 }
 
+svg:not(:root) {
+    overflow: hidden;
+}
+
 @media (max-width: 991px) {
     .padding {
         height: 110px;
