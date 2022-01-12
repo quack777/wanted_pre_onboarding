@@ -1,19 +1,22 @@
 import React, { useState } from "react";
-import icon_menu from "../images/icon-menu.png";
-import { IoIosSearch } from "react-icons/io";
-import { IoEllipsisHorizontal } from "react-icons/io5";
+import NavTop from "./navTop";
+import NavMenu from "./navMenu";
+import NavAside from "./navAside";
+import "../css/nav.css"
 
 function Nav () {
   const [toggleActive, setToggleActive] = useState(false)
 
   return (
-    <div className="Nav" style={{
+    <div className="NavBar_className__y2qGg" style={{
       position: "fixed",
       paddingRight: "initial"
     }}>
-      <div>
-        <nav>
-          
+      <div className="MainBar_MainBar__40DX7">
+        <nav className="MainBar_MainBar_nav__kwHBF">
+          <NavTop></NavTop>
+          <NavMenu></NavMenu>
+          <NavAside></NavAside>
         </nav>
       </div>
     </div>
