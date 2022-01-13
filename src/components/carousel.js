@@ -29,21 +29,21 @@ function Carousel () {
   return(
     <div className="Carousel">
       <div className="scene">
-        <div class="carousel" ref={carousel}>
-          <div class="carousel__cell">1</div>
-          <div class="carousel__cell">2</div>
-          <div class="carousel__cell">3</div>
-          <div class="carousel__cell">4</div>
-          <div class="carousel__cell">5</div>
-          <div class="carousel__cell">6</div>
-          <div class="carousel__cell">7</div>
-          <div class="carousel__cell">8</div>
-          <div class="carousel__cell">9</div>
+        <div className="carousel" ref={carousel}>
+          <div className="carousel__cell">1</div>
+          <div className="carousel__cell">2</div>
+          <div className="carousel__cell">3</div>
+          <div className="carousel__cell">4</div>
+          <div className="carousel__cell">5</div>
+          <div className="carousel__cell">6</div>
+          <div className="carousel__cell">7</div>
+          <div className="carousel__cell">8</div>
+          <div className="carousel__cell">9</div>
         </div>
       </div>
       <p style={{textAlign : "center"}}>
-        <button class="previous-button" onClick={previousMove}>Previous</button>
-        <button class="next-button" onClick={nextMove}>Next</button>
+        <button className="previous-button" onClick={previousMove}>Previous</button>
+        <button className="next-button" onClick={nextMove}>Next</button>
       </p>
     </div>
     )
