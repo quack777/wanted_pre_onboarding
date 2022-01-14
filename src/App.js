@@ -7,9 +7,9 @@ function App() {
   return (
     <div className="App">
       <Nav></Nav>
-      {/* <div className="padding"></div> */}
-      {/* <Top></Top>
-      <Carousel></Carousel> */}
+      <div className="padding"></div>
+      <Top></Top>
+      <Carousel></Carousel>
     </div>
   );
 }
