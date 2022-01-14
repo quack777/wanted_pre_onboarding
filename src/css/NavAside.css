@@ -73,6 +73,9 @@ svg:not(:root) {
     .NavAside>ul li>* {
         padding: 0 10px;
     }
+    .asideVisibleMenu {
+        display: none!important;
+    }
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
@@ -82,6 +85,9 @@ svg:not(:root) {
     }
     .NavAside>ul li .dashboardButton {
         margin: 0;
+    }
+    .asideVisibleMenu {
+        display: none!important;
     }
 }
 

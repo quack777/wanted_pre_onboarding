@@ -39,7 +39,7 @@ export default function NavAside() {
           <li className="leftDivision">
             <a className="dashboardButton">기업 서비스</a>
           </li>
-          <li>
+          <li className="asideVisibleMenu">
             <button className="menuBtn">
               <svg width="18" height="18" xmlns="http://www.w3.org/2000/svg">
                 <defs>
