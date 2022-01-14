@@ -135,9 +135,9 @@ function Top () {
 
   useEffect(() => {
     slideList.current.style.width = slideWidth * (slideLen + 2) + "px";
-    setInterval(() => {
-      slideNext()
-    }, 3000);
+    // setInterval(() => {
+    //   slideNext()
+    // }, 3000);
     let firstChild = slideList.current.firstElementChild;
     let lastChild = slideList.current.lastElementChild;
     let clonedFirst = firstChild.cloneNode(true);
@@ -145,7 +145,6 @@ function Top () {
     slideList.current.appendChild(clonedFirst);
     slideList.current.insertBefore(clonedLast, slideList.current.firstElementChild);
     slideList.current.style.transform = "translate3d(-" + ((slideWidth * (startNum + 1)) - screensize) + "px, 0px, 0px)";
-    console.log(screensize)
     curSlide = slideContents.current[curIndex];
     curSlide.classList.add("slide_active");
   }, [])

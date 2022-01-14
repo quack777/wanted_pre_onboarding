@@ -31,6 +31,16 @@
     font-weight: bold;
     color: white;
     text-align: center;
+
+    opacity: 40%;
+}
+
+.active {
+    opacity: 1;
+}
+
+.hidden {
+    display: none;
 }
 
 .carousel__cell:nth-child(9n+1) { background: hsla(  0, 100%, 50%); }
