@@ -33,11 +33,15 @@
     color: white;
     text-align: center;
 
-    opacity: 40%;
+    filter: brightness(50%);
+}
+
+.carousel__cell > img {
+
 }
 
 .active {
-    opacity: 1;
+    filter: brightness(100%);
 }
 
 .hidden {

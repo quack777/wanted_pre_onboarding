@@ -12,7 +12,6 @@ function Carousel () {
   let cellSize = 1060;
   let numberOfCells = 9;
   let tz = Math.round( ( cellSize / 2 ) /  Math.tan( Math.PI / numberOfCells ) );
-  console.log(tz);
 
   function rotateCarousel() {
     let angle = selectedIndex / cellCount * -360;
@@ -71,7 +70,7 @@ function Carousel () {
     <div className="Carousel">
       <div className="scene">
         <div className="carousel" ref={carousel}>
-          <div className="carousel__cell">1</div>
+          <div className="carousel__cell"><img src="https://static.wanted.co.kr/images/banners/1489/312a0c29.jpg"></img></div>
           <div className="carousel__cell">2</div>
           <div className="carousel__cell">3</div>
           <div className="carousel__cell">4</div>
