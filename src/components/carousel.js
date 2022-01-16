@@ -25,16 +25,22 @@ function Carousel () {
   function previousMove() {
     selectedIndex--;
     console.log(selectedIndex + 9);
-    (activeIndex === 0) 
-    ? ( carousel.current.children[activeIndex].classList.remove("active") ) 
-    : ( carousel.current.children[(9 + activeIndex)].classList.remove("active") )
 
-    activeIndex === -8 ? activeIndex = 0 : activeIndex--
+    /* (activeIndex === 0) 
+    ? ( carousel.current.children[activeIndex].classList.remove("active") ) 
+    : ( carousel.current.children[(9 + activeIndex)].classList.remove("active") ) */
+    carousel.current.children[activeIndex].classList.remove("active");
+
+    // activeIndex === -8 ? activeIndex = 0 : activeIndex--
+    activeIndex === 0 ? activeIndex = 8 : activeIndex --
     console.log(9 + activeIndex);
     console.log(carousel.current.children[0]);
-    (activeIndex === 0) 
+
+    /* (activeIndex === 0) 
     ? ( carousel.current.children[activeIndex].classList.add("active") ) 
-    : ( carousel.current.children[(9 + activeIndex)].classList.add("active") )
+    : ( carousel.current.children[(9 + activeIndex)].classList.add("active") ) */
+    carousel.current.children[activeIndex].classList.add("active");
+
     rotateCarousel();
   }
 
