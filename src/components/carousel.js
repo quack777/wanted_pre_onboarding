@@ -6,6 +6,8 @@ function Carousel () {
   let cellCount = 9;
   let selectedIndex = 0;
   let activeIndex = 0;
+  let firstHidden = 4;
+  let secondHidden = 5;
 
   let cellSize = 1060;
   let numberOfCells = 9;
@@ -20,25 +22,17 @@ function Carousel () {
 
   useEffect(() => {
     carousel.current.children[0].classList.add("active");
+    carousel.current.children[firstHidden].classList.add("hidden");
+    carousel.current.children[secondHidden].classList.add("hidden");
   }, [])
 
   function previousMove() {
     selectedIndex--;
-    console.log(selectedIndex + 9);
 
-    /* (activeIndex === 0) 
-    ? ( carousel.current.children[activeIndex].classList.remove("active") ) 
-    : ( carousel.current.children[(9 + activeIndex)].classList.remove("active") ) */
     carousel.current.children[activeIndex].classList.remove("active");
 
-    // activeIndex === -8 ? activeIndex = 0 : activeIndex--
     activeIndex === 0 ? activeIndex = 8 : activeIndex --
-    console.log(9 + activeIndex);
-    console.log(carousel.current.children[0]);
-
-    /* (activeIndex === 0) 
-    ? ( carousel.current.children[activeIndex].classList.add("active") ) 
-    : ( carousel.current.children[(9 + activeIndex)].classList.add("active") ) */
+    hiddenActive(activeIndex);
     carousel.current.children[activeIndex].classList.add("active");
 
     rotateCarousel();
@@ -47,11 +41,31 @@ function Carousel () {
   function nextMove() {
     selectedIndex++;
     carousel.current.children[activeIndex].classList.remove("active");
-    activeIndex === 8 ? activeIndex = 0 : activeIndex++ 
-    console.log(activeIndex)
+    activeIndex === 8 ? activeIndex = 0 : activeIndex++
+    hiddenActive(activeIndex);
     carousel.current.children[activeIndex].classList.add("active");
 
     rotateCarousel();
+  }
+
+  function hiddenActive(active) {
+    carousel.current.children[firstHidden].classList.remove("hidden");
+    carousel.current.children[secondHidden].classList.remove("hidden");
+
+    if (active === 4) {
+      firstHidden = active + 4;
+      secondHidden = 0;
+    } else if (active > 4) {
+      firstHidden = active - 5;
+      secondHidden = firstHidden + 1;
+    } else {
+      firstHidden = active + 4;
+      secondHidden = firstHidden + 1;
+    }
+
+    console.log(firstHidden, secondHidden)
+    carousel.current.children[firstHidden].classList.add("hidden");
+    carousel.current.children[secondHidden].classList.add("hidden");
   }
   return(
     <div className="Carousel">
