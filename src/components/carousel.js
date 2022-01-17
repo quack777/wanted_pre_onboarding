@@ -1,9 +1,10 @@
 import React, { useEffect, useRef } from "react";
 import "../css/carousel.css";
+import { cellsData } from "../components/cellsData.js";
 
 function Carousel () {
   const carousel = useRef();
-  let cellCount = 9;
+  let cellCount = cellsData.length;
   let selectedIndex = 0;
   let activeIndex = 0;
   let firstHidden = 4;
@@ -66,22 +67,25 @@ function Carousel () {
     carousel.current.children[firstHidden].classList.add("hidden");
     carousel.current.children[secondHidden].classList.add("hidden");
   }
+
   return(
     <div className="Carousel">
       <div className="scene">
         <div className="carousel" ref={carousel}>
-          <div className="carousel__cell"><img src="https://static.wanted.co.kr/images/banners/1489/312a0c29.jpg"></img></div>
-          <div className="carousel__cell">2</div>
-          <div className="carousel__cell">3</div>
-          <div className="carousel__cell">4</div>
-          <div className="carousel__cell">5</div>
-          <div className="carousel__cell">6</div>
-          <div className="carousel__cell">7</div>
-          <div className="carousel__cell">8</div>
-          <div className="carousel__cell">9</div>
+          {cellsData.map((cell, index) => {
+            return(
+              <div className="carousel__cell">
+                <img src={cell.img}></img>
+                <div className="carouselInfo">
+                  <h2>{cell.title}</h2>
+                  <h3>{cell.content}</h3>
+                </div>
+              </div>
+            )
+          })}
         </div>
       </div>
-      <p style={{textAlign : "center"}}>
+      <p style={{textAlign : "center", marginTop : "150px"}}>
         <button className="previous-button" onClick={previousMove}>Previous</button>
         <button className="next-button" onClick={nextMove}>Next</button>
       </p>

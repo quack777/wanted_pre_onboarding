@@ -1,5 +1,9 @@
+.Carousel {
+    overflow: hidden;
+}
+
 .scene {
-    border: 1px solid #CCC;
+    /* border: 1px solid #CCC; */
     position: relative;
     max-width: 1060px;
     width: 100%;
@@ -25,19 +29,46 @@
     height: 280px;
     left: 10px;
     top: 10px;
-
-    border: 2px solid black;
-    line-height: 116px;
+    /* line-height: 116px;
     font-size: 80px;
     font-weight: bold;
     color: white;
-    text-align: center;
+    text-align: center; */
 
     filter: brightness(50%);
 }
 
 .carousel__cell > img {
+    border-radius: 4px;
+    object-fit: cover;
+}
 
+.carousel__cell > .carouselInfo {
+    text-align: center;
+}
+
+.carousel__cell > .carouselInfo > h2 {
+    margin-top: 20px;
+    font-size: 18px;
+    line-height: 1;
+    font-weight: 700;
+    color: #333;
+    width: "auto";
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.carousel__cell > .carouselInfo > h3 {
+    margin-top: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.15;
+    color: #666;
+    width: "auto";
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .active {
@@ -67,3 +98,12 @@
 .carousel__cell:nth-child(7) { transform: rotateY(240deg) translateZ(1456px); }
 .carousel__cell:nth-child(8) { transform: rotateY(280deg) translateZ(1456px); }
 .carousel__cell:nth-child(9) { transform: rotateY(320deg) translateZ(1456px); }
+
+@media (min-width: 1200px) {
+    .carousel__cell > .carouselInfo > h2 {
+        margin-left: 20px;
+        margin-right: 20px;
+        font-size: 20px;
+        line-height: 1.5;
+    }    
+}
