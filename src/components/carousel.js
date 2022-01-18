@@ -32,6 +32,19 @@ function Carousel () {
     carousel.current.children[firstHidden].classList.add("hidden");
     carousel.current.children[secondHidden].classList.add("hidden");
     carousel.current.children[0].children[1].classList.add("infoActive");
+    setInterval(() => {
+      nextMove()
+    }, 2000);
+    console.log(window.innerWidth)
+    let cellWidth = ((window.innerWidth >= 1200) ? 1060 : (window.innerWidth - 97))
+    let tanz = Math.round( ( cellWidth / 2 ) /  Math.tan( Math.PI / numberOfCells ) )
+    console.log(tanz)
+    carousel.current.style.transform = `translateZ(${tanz}px)`;
+    console.log(carousel.current.style.transform)
+    cellsData.map((data, i) => {
+      cells.current[i].style.transform = `rotateY(${i * 40}deg) translateZ(${tanz}px)`
+      // console.log(cells.current[i].style.transform);
+    })
   }, [])
 
   function previousMove() {
@@ -88,18 +101,17 @@ function Carousel () {
     // console.log(window.innerWidth - 97);
     setWindowSize({width: window.innerWidth});
     setCellSz(((window.innerWidth >= 1200) ? 1060 : (window.innerWidth - 97)));
-    setTz(Math.round( ( cellSz / 2 ) /  Math.tan( Math.PI / numberOfCells ) ));
-    console.log(cellSz);
     
-    cellsData.map((data, i) => {
-      // console.log(cells.current[i].style.transform);
-      cells.current[i].style.transform = `rotateY(${i * 40}deg) translateZ(${tz}px)`
-    })
-    a();
-  }
+    let cellWidth = ((window.innerWidth >= 1200) ? 1060 : (window.innerWidth - 97))
+    setTz(Math.round( ( cellWidth / 2 ) /  Math.tan( Math.PI / numberOfCells ) ));
+    let tanz = Math.round( ( cellWidth / 2 ) /  Math.tan( Math.PI / numberOfCells ) )
 
-  function a () {
-    console.log(cellSz);
+    //useEffect에서도 taz값 반복
+    cellsData.map((data, i) => {
+      cells.current[i].style.transform = `rotateY(${i * 40}deg) translateZ(${tanz}px)`
+      // console.log(cells.current[i].style.transform);
+    })
+    console.log(tanz);
   }
 
   useEffect(() => {
@@ -132,6 +144,20 @@ function Carousel () {
         <button className="previous-button" onClick={previousMove}>Previous</button>
         <button className="next-button" onClick={nextMove}>Next</button>
       </p>
+      <button className="rightBtn" onClick={nextMove}>
+        <span className="SvgIcon_SvgIcon__root__8vwon">
+          <svg className="SvgIcon_SvgIcon__root__svg__DKYBi" viewBox="0 0 18 18">
+            <path d="m11.955 9-5.978 5.977a.563.563 0 0 0 .796.796l6.375-6.375a.563.563 0 0 0 0-.796L6.773 2.227a.562.562 0 1 0-.796.796L11.955 9z"></path>
+          </svg>
+        </span>
+      </button>
+      <button className="leftBtn" onClick={previousMove}>
+        <span className="SvgIcon_SvgIcon__root__8vwon">
+          <svg className="SvgIcon_SvgIcon__root__svg__DKYBi" viewBox="0 0 18 18">
+            <path d="m6.045 9 5.978-5.977a.563.563 0 1 0-.796-.796L4.852 8.602a.562.562 0 0 0 0 .796l6.375 6.375a.563.563 0 0 0 .796-.796L6.045 9z"></path>
+          </svg>
+        </span>
+      </button>
       <p>{cellSz}</p>
       <p>tz:{tz}</p>
     </div>
