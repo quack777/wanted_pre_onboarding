@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/wanted_pre-Onboarding_course/static/css/main.34279ebc.css",
-    "main.js": "/wanted_pre-Onboarding_course/static/js/main.4d64cd6a.js",
+    "main.css": "/wanted_pre-Onboarding_course/static/css/main.b4b2ae4e.css",
+    "main.js": "/wanted_pre-Onboarding_course/static/js/main.9d1ee6af.js",
     "static/media/carousel_08.jpg": "/wanted_pre-Onboarding_course/static/media/carousel_08.6f8b2479326e1b4366f6.jpg",
     "static/media/carousel_04.jpg": "/wanted_pre-Onboarding_course/static/media/carousel_04.3dea714dd76244dc4159.jpg",
     "static/media/carousel_10.jpg": "/wanted_pre-Onboarding_course/static/media/carousel_10.5d52598879b134579f7a.jpg",
@@ -13,11 +13,11 @@
     "static/media/carousel_02.jpg": "/wanted_pre-Onboarding_course/static/media/carousel_02.76cca6f6affacbebe461.jpg",
     "static/media/carousel_05.jpg": "/wanted_pre-Onboarding_course/static/media/carousel_05.62e6ac53507a940467b4.jpg",
     "index.html": "/wanted_pre-Onboarding_course/index.html",
-    "main.34279ebc.css.map": "/wanted_pre-Onboarding_course/static/css/main.34279ebc.css.map",
-    "main.4d64cd6a.js.map": "/wanted_pre-Onboarding_course/static/js/main.4d64cd6a.js.map"
+    "main.b4b2ae4e.css.map": "/wanted_pre-Onboarding_course/static/css/main.b4b2ae4e.css.map",
+    "main.9d1ee6af.js.map": "/wanted_pre-Onboarding_course/static/js/main.9d1ee6af.js.map"
   },
   "entrypoints": [
-    "static/css/main.34279ebc.css",
-    "static/js/main.4d64cd6a.js"
+    "static/css/main.b4b2ae4e.css",
+    "static/js/main.9d1ee6af.js"
   ]
 }
