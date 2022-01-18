@@ -16,7 +16,7 @@
     width: 100%;
     height: 100%;
     position: absolute;
-    /* transform: translateZ(-1456px); */
+    transform: translateZ(-1456px);
     transform-style: preserve-3d;
     transition: transform 500ms ease 0s;
     /* transition: transform 1s; */
@@ -77,6 +77,60 @@
 
 .carousel__cell > .carouselInfo > hr {
     display: none;
+}
+
+.carousel__cell > .carouselInfo > a {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1;
+    color: #36f;
+    height: 40px;
+    height: 40px;
+    
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    min-width: 64px;
+    padding: 0 27px;
+    box-sizing: border-box;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.carousel__cell > .carouselInfo > a > span {
+    width: 100%;
+    font-size: inherit;
+    font-weight: inherit;
+    display: inherit;
+    align-items: inherit;
+    justify-content: inherit;
+    color: inherit;
+}
+
+.carousel__cell > .carouselInfo > a > span > span {
+    margin-top: -2px;
+    margin-right: -1px;
+    margin-left: 2px;
+}
+
+.carousel__cell > .carouselInfo > a > span > span > span {
+    width: 100%;
+    display: flex;
+    align-items: inherit;
+    justify-content: inherit;
+}
+
+.carousel__cell > .carouselInfo > a > span > span > span > svg {
+    overflow: hidden;
+    user-select: none;
+    width: 1em;
+    height: 1em;
+    display: inline-block;
+    fill: currentColor;
+    flex-shrink: 0;
+    font-size: inherit;
 }
 
 .active {
@@ -153,7 +207,7 @@
     font-size: inherit;
 }
 
-.carousel__cell:nth-child(9n+1) { background: hsla(  0, 100%, 50%); }
+/* .carousel__cell:nth-child(9n+1) { background: hsla(  0, 100%, 50%); }
 .carousel__cell:nth-child(9n+2) { background: hsla( 40, 100%, 50%); }
 .carousel__cell:nth-child(9n+3) { background: hsla( 80, 100%, 50%); }
 .carousel__cell:nth-child(9n+4) { background: hsla(120, 100%, 50%); }
@@ -161,7 +215,7 @@
 .carousel__cell:nth-child(9n+6) { background: hsla(200, 100%, 50%); }
 .carousel__cell:nth-child(9n+7) { background: hsla(240, 100%, 50%); }
 .carousel__cell:nth-child(9n+8) { background: hsla(280, 100%, 50%); }
-.carousel__cell:nth-child(9n+0) { background: hsla(320, 100%, 50%); }
+.carousel__cell:nth-child(9n+0) { background: hsla(320, 100%, 50%); } */
 
 .carousel__cell:nth-child(1) { transform: rotateY(  0deg) translateZ(1456px); }
 .carousel__cell:nth-child(2) { transform: rotateY( 40deg) translateZ(1456px); }
@@ -206,6 +260,9 @@
         border: none;
         flex-shrink: 0;
         background-color: #ececec;
+    }
+    .carousel__cell > .carouselInfo > a {
+        margin: 6px 0 0 13px;
     }
 }
 

@@ -8,7 +8,6 @@ function App() {
     <div className="App">
       <Nav></Nav>
       <div className="padding"></div>
-      {/* <Top></Top> */}
       <Carousel></Carousel>
     </div>
   );
