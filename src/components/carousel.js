@@ -34,7 +34,7 @@ function Carousel () {
     carousel.current.children[0].children[1].classList.add("infoActive");
     setInterval(() => {
       nextMove()
-    }, 3700);
+    }, 5000);
     console.log(window.innerWidth)
     let cellWidth = ((window.innerWidth >= 1200) ? 1060 : (window.innerWidth - 97))
     let tanz = Math.round( ( cellWidth / 2 ) /  Math.tan( Math.PI / numberOfCells ) )

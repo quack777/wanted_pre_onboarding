@@ -13,6 +13,12 @@
     margin-right: 15px;
 }
 
+.MainBar_hamberger > img {
+    width: 17px;
+    height: 14px;
+    object-fit: contain;
+}
+
 .MainBar_MainBar_logo {
     display: block;
 }
@@ -20,6 +26,7 @@
 #main-title {
     font-size: 17px;
 }
+
 #main-title::before {
     content: "\e992";
 }

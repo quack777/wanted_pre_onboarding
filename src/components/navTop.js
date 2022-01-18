@@ -10,9 +10,10 @@ export default function NavTop() {
             style={{width: "17px", height: "14px", objectFit: "contain"}}>
           </img>
         </button>
-        <a href="/" className="MainBar_MainBar_logo">
+        {/* <a href="/" className="MainBar_MainBar_logo">
           <i id="main-title" className="icon-logo"></i>
-        </a>
+        </a> */}
+        <img className="logo" src="https://www.wantedlab.com/img/logo.png" alt="logo" style={{height: "17px", marginBottom: "5px"}}></img>
       </div>
       <button id="gnbSignupBtn" className="xsSignUpButton">회원가입하기</button>
     </div>
