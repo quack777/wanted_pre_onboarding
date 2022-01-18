@@ -26,9 +26,3 @@ https://quack777wantedclone.netlify.app/
       2. 반응형이 작동하는 영상
    3. 혹시 구현사항이 많이 부족하여 배포나 녹화하기가 어렵다면 코드만 제출하셔도 됩니다.
 
-https://www.notion.so/X-9e8ff10dd1614112a81797219b7e6742
-
-
-
-## 기능구현 🤷‍♂️
-
